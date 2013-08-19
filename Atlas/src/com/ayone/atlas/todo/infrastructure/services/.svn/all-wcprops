@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/todo/infrastructure/services
+END
+ITodoService.as
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/todo/infrastructure/services/ITodoService.as
+END
+TodoMockService.as
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/todo/infrastructure/services/TodoMockService.as
+END

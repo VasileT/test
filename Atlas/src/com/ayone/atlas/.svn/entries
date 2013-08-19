@@ -1,0 +1,61 @@
+10
+
+dir
+1893
+http://svn.ayonesoftware.com/svn/flex/Atlas/src/com/ayone/atlas
+http://svn.ayonesoftware.com/svn/flex
+
+
+
+2011-08-21T21:09:36.086441Z
+1893
+aadrian
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+303e570b-691a-4cf1-ac59-6a7ecca2bf19
+
+assignment
+dir
+
+discussion
+dir
+
+domain
+dir
+
+infrastructure
+dir
+
+membership
+dir
+
+presentation
+dir
+
+projectList
+dir
+
+session
+dir
+
+timeTracking
+dir
+
+todo
+dir
+
+util
+dir
+

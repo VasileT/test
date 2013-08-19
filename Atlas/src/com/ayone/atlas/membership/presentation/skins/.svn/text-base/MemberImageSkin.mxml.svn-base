@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+        xmlns:s="library://ns.adobe.com/flex/spark" 
+        xmlns:fb="http://ns.adobe.com/flashbuilder/2009">
+    
+    <s:states>
+        <s:State name="uninitialized"/>
+        <s:State name="loading"/>
+        <s:State name="ready"/>
+        <s:State name="invalid"/>
+        <s:State name="disabled"/>
+    </s:states>
+    
+    <fx:Metadata>
+        [HostComponent("spark.components.Image")]
+    </fx:Metadata>
+    
+	<s:Rect id="frame"
+			left="0" right="0" top="0" bottom="0">
+		<s:stroke>
+			<s:SolidColorStroke color="0x6E6E6E"/>
+		</s:stroke>
+	</s:Rect>
+    
+    <s:BitmapImage id="imageDisplay"
+				   left="1" top="1" right="1" bottom="1"/>
+    
+    <s:Range id="progressIndicator"
+			 layoutDirection="ltr"
+			 skinClass="spark.skins.spark.ImageLoadingSkin"
+			 includeIn="loading"
+			 verticalCenter="0" horizontalCenter="0"/>
+    
+    <s:BitmapImage source="@Embed(source='Assets.swf',symbol='__brokenImage')"
+				   includeIn="invalid"
+				   verticalCenter="0" horizontalCenter="0"/>
+    
+</s:Skin>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx">
+	
+	<fx:Metadata>
+		[HostComponent("com.ayone.atlas.session.presentation.Login")]
+	</fx:Metadata>
+	
+	<s:Rect left="0" right="0" top="0" bottom="0">
+		<s:fill>
+			<s:SolidColor color="0x0023ff"/>
+		</s:fill>
+		<s:stroke>
+			<s:SolidColorStroke color="0"/>
+		</s:stroke>
+	</s:Rect>
+	
+	<s:HGroup left="40" top="50">
+		<s:Label text="username:"/>
+		
+		<s:TextInput id="usernameInput"/>
+	</s:HGroup>
+	
+	<s:HGroup left="40" top="90">
+		<s:Label text="password:"/>
+		
+		<s:TextInput id="passwordInput"
+					 displayAsPassword="true"/>
+	</s:HGroup>
+				 
+	<s:Button id="loginButton"
+			  label="Login!"
+			  left="120" top="140" right="120"/>
+	
+</s:Skin>

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/projectList/infrastructure/services
+END
+IProjectListService.as
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/projectList/infrastructure/services/IProjectListService.as
+END
+ProjectListMockService.as
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/projectList/infrastructure/services/ProjectListMockService.as
+END

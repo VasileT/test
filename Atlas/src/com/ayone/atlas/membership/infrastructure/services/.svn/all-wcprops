@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/membership/infrastructure/services
+END
+IMembershipService.as
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/membership/infrastructure/services/IMembershipService.as
+END
+MembershipMockService.as
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/membership/infrastructure/services/MembershipMockService.as
+END

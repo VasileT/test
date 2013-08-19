@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/flex/!svn/ver/1828/Atlas/src/com/ayone/atlas/membership/infrastructure/tasks
+END
+UpdateProjectCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/flex/!svn/ver/1778/Atlas/src/com/ayone/atlas/membership/infrastructure/tasks/UpdateProjectCommand.as
+END
+SendinvitationCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/membership/infrastructure/tasks/SendinvitationCommand.as
+END
+LoadMembersCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/membership/infrastructure/tasks/LoadMembersCommand.as
+END
+AddMembersFromContactsCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/flex/!svn/ver/1828/Atlas/src/com/ayone/atlas/membership/infrastructure/tasks/AddMembersFromContactsCommand.as
+END
+LoadContactsCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/membership/infrastructure/tasks/LoadContactsCommand.as
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/flex/!svn/ver/1866/Atlas/src/com/ayone/atlas/projectList/infrastructure/tasks
+END
+CreateProjectCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/flex/!svn/ver/1845/Atlas/src/com/ayone/atlas/projectList/infrastructure/tasks/CreateProjectCommand.as
+END
+LoadProjectsCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/flex/!svn/ver/1845/Atlas/src/com/ayone/atlas/projectList/infrastructure/tasks/LoadProjectsCommand.as
+END
+ICreateProjectCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/flex/!svn/ver/1845/Atlas/src/com/ayone/atlas/projectList/infrastructure/tasks/ICreateProjectCommand.as
+END
+CreateProjectMockCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/projectList/infrastructure/tasks/CreateProjectMockCommand.as
+END
+SelectProjectTask.as
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/flex/!svn/ver/1866/Atlas/src/com/ayone/atlas/projectList/infrastructure/tasks/SelectProjectTask.as
+END
+LoadProjectsMockCommand.as
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/flex/!svn/ver/1894/Atlas/src/com/ayone/atlas/projectList/infrastructure/tasks/LoadProjectsMockCommand.as
+END

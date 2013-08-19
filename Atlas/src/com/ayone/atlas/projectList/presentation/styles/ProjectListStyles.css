@@ -1,0 +1,9 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace "com.ayone.atlas.projectList.presentation.*";
+
+ProjectListContainer
+{
+	skin-class: ClassReference("com.ayone.atlas.projectList.presentation.skins.ProjectListContainerSkin");
+}

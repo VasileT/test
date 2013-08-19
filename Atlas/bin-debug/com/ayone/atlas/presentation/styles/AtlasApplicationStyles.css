@@ -1,0 +1,16 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace "com.ayone.atlas.presentation.*";
+
+AtlasApplication
+{
+	skin-class: ClassReference("com.ayone.atlas.presentation.skins.AtlasApplicationSkin");
+}
+
+.infoLabel
+{
+	fontFamily: Arial;
+	fontSize: 13;
+	color: #6E6E6E;
+}

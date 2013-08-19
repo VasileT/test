@@ -1,0 +1,37 @@
+10
+
+dir
+1893
+http://svn.ayonesoftware.com/svn/flex/Atlas/src/com/ayone/atlas/projectList
+http://svn.ayonesoftware.com/svn/flex
+
+
+
+2011-05-23T16:13:02.285945Z
+1866
+vasile.tomulesei
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+303e570b-691a-4cf1-ac59-6a7ecca2bf19
+
+domain
+dir
+
+infrastructure
+dir
+
+presentation
+dir
+

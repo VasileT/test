@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/mx" 
+				xmlns:todo="com.ayone.atlas.todo.presentation.*" 
+				xmlns:assignment="com.ayone.atlas.assignment.presentation.*"
+				xmlns:timeTracking="com.ayone.atlas.timeTracking.presentation.*"
+				xmlns:discussion="com.ayone.atlas.discussion.presentation.*"
+				autoDrawBackground="false"
+				width="100%"
+				height.colapsed="20" height.expanded="40" height.normalHeader="53"
+				height.hoveredHeader="70" height.downHeader="70"
+				addedToStage="creationCompleteHandler(event)">
+	
+	<s:states>
+		<s:State name="normal" stateGroups="expanded"/>
+		<s:State name="down" stateGroups="expanded"/>
+		<s:State name="hovered" stateGroups="expanded"/>
+		<s:State name="normalResolved" stateGroups="colapsed"/>
+		<s:State name="downResolved" stateGroups="expanded"/>
+		<s:State name="hoveredResolved" stateGroups="expanded"/>
+		<s:State name="normalHeader" stateGroups="header"/>
+		<s:State name="downHeader" stateGroups="header"/>
+		<s:State name="hoveredHeader" stateGroups="header"/>
+	</s:states>
+	
+	<fx:Script>
+	<![CDATA[
+		import com.ayone.atlas.domain.ToDoItem;
+		import com.ayone.atlas.presentation.skins.ActionButtonSkin;
+		import com.ayone.atlas.todo.infrastructure.tasks.IChangeTodoStatusCommand;
+		import com.ayone.atlas.util.SpringUtil;
+		
+		import org.springextensions.actionscript.core.command.ICommand;
+		
+		//------------------------------
+		// Visual Elements
+		//------------------------------
+		
+		private var dateLabel:Label;
+		
+		//------------------------------------------------------------
+		//
+		// Methods
+		//
+		//------------------------------------------------------------
+		
+		private function formatItemIndex(index:int):String
+		{
+			var returnVal:String;
+			
+			switch (index.toString().length)
+			{
+				case 1:
+					returnVal = "00" + index.toString();
+					break;
+				
+				case 2:
+					returnVal = "0" + index.toString();
+					break;
+				
+				default:
+					returnVal = index.toString();
+					break;
+			}
+			
+			return returnVal;
+		}
+		
+		override public function set data(value:Object):void
+		{
+			super.data = value;
+			
+			if (value)
+			{
+				todoIndex.text = value.index.toString();
+				todoTitle.text = value.title;
+				
+				invalidateRendererState();
+			}
+		}
+		
+		//------------------------------------------------------------
+		// Skinning
+		//------------------------------------------------------------
+		
+		override protected function getCurrentRendererState():String
+		{
+			var returnState:String = super.getCurrentRendererState();
+			
+			if (returnState.indexOf("normal") != -1)
+			{
+				if (data.isHeader)
+					returnState = "normalHeader";
+				else if (data.resolved)
+					returnState = "normalResolved";
+			}
+			else if (returnState.indexOf("hovered") != -1)
+			{
+				if (data.isHeader)
+					returnState = "hoveredHeader";
+				else if (data.resolved)
+					returnState = "hoveredResolved";
+			}
+			else if (returnState.indexOf("down") != -1)
+			{
+				if (data.isHeader)
+					returnState = "downHeader";
+				else if (data.resolved)
+					returnState = "downResolved";
+			}
+			
+			return returnState;
+		} 
+		
+		//------------------------------------------------------------
+		// Event Handling
+		//------------------------------------------------------------
+		
+		private function creationCompleteHandler(e:Event):void
+		{
+			invalidateRendererState();
+		}
+		
+		private function resolveButtonClickHandler(e:MouseEvent):void
+		{
+			var command:ICommand = SpringUtil.createCommandById("resolveTodoCommand");
+			IChangeTodoStatusCommand(command).todoItem = ToDoItem(data);
+			command.execute();
+		}
+		
+		private function reopenButtonClickHandler(e:MouseEvent):void
+		{
+			var command:ICommand = SpringUtil.createCommandById("reopenTodoCommand");
+			IChangeTodoStatusCommand(command).todoItem = ToDoItem(data);
+			command.execute();
+		}
+	]]>
+	</fx:Script>
+	
+	<s:Rect id="strokeRect"
+			excludeFrom="normal, normalResolved, normalHeader"
+			radiusX="2" radiusY="2"
+			left="0" right="0" top="0" top.hoveredHeader="35" top.downHeader="35" bottom="0">
+		<s:stroke>
+			<s:SolidColorStroke color="0xCBDAE8" weight="2"/>
+		</s:stroke>
+	</s:Rect>
+	
+	<s:Line xFrom="0" xTo="{width}"
+			includeIn="header"
+			top="2" left="0" right="0">
+		<s:stroke>
+			<s:SolidColorStroke color="0"/>
+		</s:stroke>
+	</s:Line>
+	
+	<s:Label id="todoStatus"
+			 includeIn="header"
+			 text="{'Completed on ' + new Date(data.modified).toDateString()}"
+			 left="5" top="8"/>
+	
+	<s:Label id="todoIndex"
+			 width="25"
+			 left="5" top="8" top.header="40"/>
+	
+	<s:Label id="todoTitle"
+			 width="100%"
+			 left="30" top="8" top.header="40"/>
+	
+   <s:Group width="100%"
+			left="30" bottom="6"
+			excludeFrom="colapsed, normalHeader">
+		<assignment:AssignButton id="assignButton"
+								 label="Assign"
+								 skinClass="com.ayone.atlas.presentation.skins.ActionButtonSkin"/>
+		
+		<timeTracking:EstimateButton id="estimateButton"
+									 label="Estimate"
+									 skinClass="com.ayone.atlas.presentation.skins.ActionButtonSkin"/>
+		
+		<discussion:CommentButton id="commentButton"
+								  label="Comment"
+								  skinClass="com.ayone.atlas.presentation.skins.ActionButtonSkin"/>
+		
+		<todo:ResolveButton id="resolveButton"
+							label="Resolve"
+							skinClass="com.ayone.atlas.presentation.skins.ActionButtonSkin"
+							click="resolveButtonClickHandler(event)"/>
+		
+		<todo:ReopenButton id="reopenButton"
+						   label="Reopen"
+						   skinClass="com.ayone.atlas.presentation.skins.ActionButtonSkin"
+						   click="reopenButtonClickHandler(event)"/>
+		
+		<s:layout>
+			<todo:ActionButtonsLayout/>
+		</s:layout>
+	</s:Group>
+	
+</s:ItemRenderer>

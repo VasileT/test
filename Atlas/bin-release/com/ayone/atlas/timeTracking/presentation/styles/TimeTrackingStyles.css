@@ -1,0 +1,11 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace "com.ayone.atlas.timeTracking.presentation.*";
+
+TimeTrackingContainer
+{
+	skin-class: ClassReference("com.ayone.atlas.timeTracking.presentation.skins.TimeTrackingContainerSkin");
+}
+
+

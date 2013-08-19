@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx" 
+		xmlns="com.ayone.atlas.presentation.*" 
+		xmlns:session="com.ayone.atlas.session.presentation.*" 
+		xmlns:projectList="com.ayone.atlas.projectList.presentation.*" 
+		xmlns:membership="com.ayone.atlas.membership.presentation.*"
+		xmlns:todo="com.ayone.atlas.todo.presentation.*">
+	
+	<fx:Metadata>
+		[HostComponent("com.ayone.atlas.presentation.AtlasApplication")]
+	</fx:Metadata>
+	
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="disabled"/>
+		<s:State name="login"/>
+		<s:State name="projects"/>
+		<s:State name="project"/>
+	</s:states>
+	
+
+	<session:Login width="300"
+				   includeIn="login"
+				   left="200" top="200"/>
+	
+	<session:Logout width="150"
+					includeIn="projects, project"
+					right="0" top="0"/>
+	
+	<projectList:ProjectListContainer includeIn="projects"
+									  left="200" top="200"/>
+	
+	<membership:MembershipContainer width="180"
+									includeIn="project"
+									left="50" top="100"/>
+	
+	<todo:TodoContainer includeIn="project"
+						left="250" right="20" top="100" bottom="0"/>
+	
+	<s:Label id="projectLabel"
+			 includeIn="project"
+			 fontSize="24"
+			 left="50" top="50"/>
+	
+</s:Skin>

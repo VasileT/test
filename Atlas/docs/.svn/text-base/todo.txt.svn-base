@@ -1,0 +1,61 @@
+Ultim 056
+
+056 Sroll issue fixat, astfel ca lista sa revina la pozitia intiala
+055 Height fix pentru aplicatie si lista de todouri. Folosit virtualization pentru reutilizat rendereri.
+054 Codul pentru isHeader din TodoContainer simplificat.
+053 Layer de servicii adaugat.
+052 Afisarea todourilor completate pe zile.
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+
+018 Inlocuieste boolean flag folosit la invalidateskinstate cu o alta solutie.
+051 Butonul de resolve prea lat.
+050 Scroll pe toata aplicatia in functie de numarul de todouri afisate.
+048 Spatierea pentru todourile completate trebuie sa fie in asa fel incat la rollover, linia de sus sa fie la
+	mijlocul distantei dintre texte.
+047 TodoItem sa nu extinda din EventDispatcher.
+046 Container dinamic pentru butoanele de actiune dintrun renderer de todo.
+045 Numele proiectului curent afisat.
+043 Diferentele de afisare pentru butoane intrun renderer de todo. Todourile completate afiseaza doar o linie,
+	linia de butoane fiind afisata doar la rollover.
+042 Todourile nou create apar primele in lista. Todourile completate care se redeschid apar primele in lista.
+041 Completarea unui todo. Redeschiderea unui todo.
+040 Adaugarea unui proiect pe server.
+039 Lista de proiecte incarcate de pe server.
+038 addContacts.enabled scos din Contacts.
+037 Skin pentru lista de todouri si rendereri. Deocamdata doar titlul afisat.
+019 Adaugarea unui todo folosind input. Lista de todouri updatata dupa adaugare.
+036 Redenumit ContactItemRenderer.contactSelector.
+028 Alinierile puse corect in Invitation.
+032 Skin customizat pentru CheckBox.
+035 Legatura la server pentru login si logout.
+025 Pereche de CheckSessionCommand care apeleaza serverul.
+031 Dupa ce au fost adaugate contacte (lista sau invitatie), componentele afiseaza stateul default.
+029 Butonul de actiune afiseaza hand cursor pe stateul de rollover.
+034 RemoteContext.sessionUrl redenumit endpointUrl.
+033 Contacts.updateAddContactControl redenumita in updateAddContactsButton.
+030 Cand este doar un contact selectat in lista, butonul de adaugare foloseste "contact" in loc de "contacts".
+027 Cand nu este nici un contact selectat in lista, butonul de adaugare are label "Select contacts to add".
+026 Cand se revine la lista de membri din stateul de add, butonul de "+add" si backgroundul sunt afisate.
+024 Skin class pentru Invitation pus din css.
+023 Spatieri si fixat partRemoved pentru Invitation.
+022 Fara cod cu logica in ContactsSkin.
+021 Completat Contacts.partRemoved.
+020 AddMembersFromContacts redenumita AddMembersFromContactsCommand.
+011 Send assignment din MemberItemRenderer afisat doar la rollover pe renderer. Sageata inclusa in text.
+017 Adaugarea unui membru (folosing contacte sau invitatie).
+016 Backgroundul de rollover de la lista de membri nu este aliniat cu backgroundul de rollover de la header.
+015 Lista de membri fara selectie. Doar rollover.
+014 Butoanele de action si navigation cu text underlined in stateul de rollover. 
+013 Contur gri pentru imaginile membrilor. Fara fill.
+012 MemberItemRendererImageSkin redenumita in MemberImageSkin.
+010 MemberListSkin redenumita in SimpleListSkin, mutata in main, si fixat spatii.
+009 Rollover si rollout pentru grupul din MembershipContainerSkin declarate in actionscript.
+008 Skinning pentru lista de membri ai unui proiect.
+007 PostSelectProjectTask nu are nevoie de selectedProject.
+006 Dupa ce un proiect este selectat, todourile proiectului incarcate si afisate.
+005 Dupa ce un proiect este selectat, membrii proiectului incarcati si afisati.
+004 La selectarea unui proiect din lista de proiecte, stateul de proiect este afisat (membri, todo etc).
+003 Cat timp sesiunea este activa, in dreapta sus apare componenta de logout.
+002 Cand login se termina cu success, proiectele la care userul este membru sunt listate.
+001 La incarcarea aplicatiei, verificat sesiunea. Daca nu este valida, formularul de login afisat.

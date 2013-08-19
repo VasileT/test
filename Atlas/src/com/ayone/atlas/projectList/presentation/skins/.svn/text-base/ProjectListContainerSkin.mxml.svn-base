@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx">
+	
+	<fx:Metadata>
+		[HostComponent("com.ayone.atlas.projectList.presentation.ProjectListContainer")]
+	</fx:Metadata>
+	
+	<s:states>
+		<s:State name="disabled"/>
+		<s:State name="normal"/>
+	</s:states>
+	
+	<s:List id="projectList"
+			width="100"
+			left="0" top="0"/>
+	
+	<s:TextInput id="projectInput"
+				 width="100"
+				 left="{projectList.x + projectList.width + 20}" top="20"/>
+	
+	<s:Button id="createProjectButton"
+			  	  label="create project"
+				  width="100"
+				  left="{projectList.x + projectList.width + 20}" top="60"/>
+	
+</s:Skin>

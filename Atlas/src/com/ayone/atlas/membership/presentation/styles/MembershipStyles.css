@@ -1,0 +1,18 @@
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace "com.ayone.atlas.membership.presentation.*";
+
+MembershipContainer
+{
+	skin-class: ClassReference("com.ayone.atlas.membership.presentation.skins.MembershipContainerSkin");
+}
+
+Contacts
+{
+	skin-class: ClassReference("com.ayone.atlas.membership.presentation.skins.ContactsSkin");
+}
+
+Invitation
+{
+	skin-class: ClassReference("com.ayone.atlas.membership.presentation.skins.InvitationSkin");
+}

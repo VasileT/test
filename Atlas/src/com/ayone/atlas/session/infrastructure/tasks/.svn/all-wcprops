@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/flex/!svn/ver/1834/Atlas/src/com/ayone/atlas/session/infrastructure/tasks
+END
+LogoutTask.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/flex/!svn/ver/1831/Atlas/src/com/ayone/atlas/session/infrastructure/tasks/LogoutTask.as
+END
+LoginTask.as
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/flex/!svn/ver/1834/Atlas/src/com/ayone/atlas/session/infrastructure/tasks/LoginTask.as
+END
+CheckSessionMockTask.as
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/flex/!svn/ver/1824/Atlas/src/com/ayone/atlas/session/infrastructure/tasks/CheckSessionMockTask.as
+END
+LogoutMockTask.as
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/flex/!svn/ver/1834/Atlas/src/com/ayone/atlas/session/infrastructure/tasks/LogoutMockTask.as
+END
+LoginMockTask.as
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/flex/!svn/ver/1834/Atlas/src/com/ayone/atlas/session/infrastructure/tasks/LoginMockTask.as
+END
+ILoginTask.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/flex/!svn/ver/1834/Atlas/src/com/ayone/atlas/session/infrastructure/tasks/ILoginTask.as
+END
+CheckSessionTask.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/flex/!svn/ver/1831/Atlas/src/com/ayone/atlas/session/infrastructure/tasks/CheckSessionTask.as
+END

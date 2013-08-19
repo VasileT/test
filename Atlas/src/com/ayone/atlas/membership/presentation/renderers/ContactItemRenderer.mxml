@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/mx" 
+				autoDrawBackground="false">
+
+	<fx:Script>
+		<![CDATA[
+			import com.ayone.atlas.membership.infrastructure.events.MembershipEvent;
+			import com.ayone.atlas.membership.presentation.skins.CheckboxSkin;
+			
+			//------------------------------------------------------------
+			//
+			// Methods
+			//
+			//------------------------------------------------------------
+			
+			//------------------------------------------------------------
+			// Event Handling
+			//------------------------------------------------------------
+			
+			protected function contactSelectorChangeHandler(event:Event):void
+			{
+				if (selectionCheckbox.selected)
+					dispatchEvent(new MembershipEvent(MembershipEvent.ADD_CONTACT_TO_ADD_QUEUE, true));
+				else
+					dispatchEvent(new MembershipEvent(MembershipEvent.REMOVE_CONTACT_FROM_ADD_QUEUE, true));
+			}
+			
+			[EventHandler(name="membershipShowMembers")]
+			public function membershipShowMembersHandler():void
+			{
+				selectionCheckbox.selected = false;
+			}
+		]]>
+	</fx:Script>
+
+	<s:CheckBox id="selectionCheckbox" change="contactSelectorChangeHandler(event)"
+				skinClass="com.ayone.atlas.membership.presentation.skins.CheckboxSkin"
+				width="10" height="10"
+				left="0" top="0" bottom="0"/>
+	
+	<s:Image source="{data.imageUrl}"
+			 scaleMode="stretch"
+			 skinClass="com.ayone.atlas.membership.presentation.skins.MemberImageSkin"
+			 width="36" height="36"
+			 left="20" top="0" bottom="0"/>
+	
+	<s:Label text="{data.name}"
+			 fontFamily="Arial" fontSize="12"
+			 textAlign="left"
+			 left="62" top="6" right="6"/>
+	
+</s:ItemRenderer>

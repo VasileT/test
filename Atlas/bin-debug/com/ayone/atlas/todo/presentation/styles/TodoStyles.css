@@ -1,0 +1,10 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace "com.ayone.atlas.todo.presentation.*";
+
+TodoContainer
+{
+	skin-class: ClassReference("com.ayone.atlas.todo.presentation.skins.TodoContainerSkin");
+}
+

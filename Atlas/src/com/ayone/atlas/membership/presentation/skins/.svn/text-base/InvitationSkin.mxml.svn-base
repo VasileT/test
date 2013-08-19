@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" 
+		xmlns:mx="library://ns.adobe.com/flex/mx">
+	
+	<fx:Metadata>
+		[HostComponent("com.ayone.atlas.membership.presentation.Invitation")]
+	</fx:Metadata>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.ayone.atlas.presentation.skins.ActionButtonSkin;
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<mx:EmailValidator id="emailValidator"
+						   source="{emailInput}"
+						   property="text" 
+						   trigger="{sendInvitationButton}"
+						   triggerEvent="click"/>
+	</fx:Declarations>
+	
+	<s:Label text="...or invite by email"
+			 styleName="infoLabel"
+			 left="6" top="26" right="6"/>
+	
+	<s:TextInput id="emailInput" 
+				 left="6" top="45" right="6"/>
+	
+	<s:Button id="sendInvitationButton"
+			  label="Send invitation"
+			  skinClass="com.ayone.atlas.presentation.skins.ActionButtonSkin"
+			  left="6" top="75"/>
+	
+</s:Skin>

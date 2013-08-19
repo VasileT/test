@@ -1,0 +1,8 @@
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace "com.ayone.atlas.assignment.presentation.*";
+
+AssignmentContainer
+{
+	skin-class: ClassReference("com.ayone.atlas.assignment.presentation.skins.AssignmentContainerSkin");
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/mx" 
+				xmlns:skins="com.ayone.atlas.presentation.skins.*"
+				autoDrawBackground="false"
+				height="38">
+	
+	<fx:Script>
+		import com.ayone.atlas.membership.presentation.skins.MemberImageSkin;
+	</fx:Script>
+	
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="down"/>
+		<s:State name="hovered"/>
+	</s:states>
+	
+	<s:Rect includeIn="hovered, down"
+		    left="0" right="0" top="0" bottom="0">
+		<s:fill>
+			<s:SolidColor color="0xEFF2FA"/>
+		</s:fill>
+	</s:Rect>
+	
+	<s:Label text="{data.name}"
+			 fontFamily="Arial" fontSize="12"
+			 textAlign="left"
+			 left="42" top="6" right="6"/>
+	
+	<s:Button id="assignButton"
+			  label="→ send assignment"
+			  skinClass="com.ayone.atlas.presentation.skins.NavigationButtonSkin"
+			  includeIn="down, hovered"
+			  left="42" bottom="6" top="15"/>
+	
+	<s:Image source="{data.imageUrl}"
+			 scaleMode="stretch"
+			 skinClass="com.ayone.atlas.membership.presentation.skins.MemberImageSkin"
+			 width="36" height="36"
+			 left="0" top="0" bottom="0"/>
+	
+</s:ItemRenderer>
